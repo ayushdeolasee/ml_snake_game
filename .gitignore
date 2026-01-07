@@ -1,2 +1,4 @@
 wandb
+data
 .DS_Store
+*.rdb
