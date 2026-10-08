@@ -25,7 +25,7 @@ HIDDEN_SIZE = 64
 EPOCHS = 1000000
 EPISODE_ID = 0
 
-device = "mps" if torch.backends.mps.is_available() else "cpu"
+device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
 print(f"Using {device}")
 
 r = redis.Redis(host="localhost", port=6379, db=0)
